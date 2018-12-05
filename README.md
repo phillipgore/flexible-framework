@@ -1,6 +1,6 @@
 # Flexible Framework
 
-Flexible Framework is an ever-growing collection of SASS centered on standardizing repeated patterns in our application development work at Phillip Gore Design.
+Flexible Framework is an ever-growing collection of useful and customizable SASS (breakpoints, grids, spacing, etc). It is the standardization of repeated patterns in our application development work at Phillip Gore Design.
 
 ## Quick Start
 
