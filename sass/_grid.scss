@@ -1,0 +1,83 @@
+
+/* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
+
+/* Container widths */
+$containers:(
+    'tn': 320,
+    'xs': map-get($queries, 'xs'),
+    'sm': map-get($queries, 'sm'),
+    'md': map-get($queries, 'md'),
+    'lg': map-get($queries, 'lg'),
+    'xl': map-get($queries, 'xl'),
+);
+
+$floats: ('left', 'right', 'none');
+$displays: ('initial', 'inline', 'inline-block', 'block', 'none');
+
+.img-flex, .image-flex{
+    display:block;
+    max-width:100%;
+    height:auto
+}
+
+/* Everything is set to border-box. */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Set a clearix for rows and any element given the class "row" or "clearfix". */
+.row:after, .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+	width: 100%;
+	float: left;
+	positon: relative;
+}
+
+@each $container-label, $container-size in $containers { 
+	/* Media Query for #{$container-size}px and larger screens (#{$container-label}). */
+	@media only screen and (min-width: #{$container-size}px) {
+		/* Container (#{$container-label}) */
+		.container-#{$container-label} { width: #{$container-size}px; margin: 0px auto; }
+	}
+}
+
+@each $query-label, $query-size in $queries { 
+	/* Media Query for #{$query-size}px and larger screens (#{$query-label}). */
+	@media only screen and (min-width: #{$query-size}px) {
+
+		/* Floats (#{$query-label}) */
+		@each $float in $floats {
+			.fl-#{$query-label}-#{$float}, .float-#{$query-label}-#{$float} { float: #{$float}; }
+		}
+
+		/* Displays (#{$query-label}) */
+		@each $display in $displays {
+			.dis-#{$query-label}-#{$display}, .display-#{$query-label}-#{$display} { 
+				display: #{$display}; 
+				@if $display == "block" {width: 100%;} 
+			}
+		}
+
+		/* Columns (#{$query-label}) */
+		@each $span-numerator, $span-denominators in $columns {
+			@each $span-denominator in $span-denominators {
+				.col-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .column-#{$query-label}-#{$span-denominator}of#{$span-numerator} {width: percentage($span-denominator / $span-numerator);}
+			}
+		}
+
+		/* Offsets (#{$query-label}) */
+		.offset-#{$query-label}-0 {margin-left: 0px;}
+		@each $span-numerator, $span-denominators in $columns {
+			@each $span-denominator in $span-denominators {
+				.off-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .offset-#{$query-label}-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
+			}
+		}
+	}
+}

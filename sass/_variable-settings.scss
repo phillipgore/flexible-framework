@@ -1,0 +1,222 @@
+/* ==================== Media Query Variables ==================== */
+
+/* Media Quieries - Add, subtract or alter breakpoints (px). We reccomend only alter the value not the key in the key value pair. */
+$queries:(
+    'tn': 0, /* We reccomend you NOT change 'tn' from 0. */
+    'xs': 480,
+    'sm': 640,
+    'md': 768,
+    'lg': 896,
+    'xl': 1200,
+);
+
+
+
+
+/* ==================== Grid Variables ==================== */
+
+/* Columns - Add or subtract various column breakdowns. Follow the pattern when adding. */
+$columns: (
+	1: (1), /* creates one column */
+	2: (1, 2), /* creates two columns of equal width */
+	3: (1, 2, 3), /* creates three columns of equal width */
+	4: (1, 2, 3, 4), /* creates four columns of equal width */
+	5: (1, 2, 3, 4, 5), /* creates five columns of equal width */
+	6: (1, 2, 3, 4, 5, 6), /* creates six columns of equal width */
+	7: (1, 2, 3, 4, 5, 6, 7), /* creates seven columns of equal width */
+	8: (1, 2, 3, 4, 5, 6, 7, 8), /* creates eight columns of equal width */
+	9: (1, 2, 3, 4, 5, 6, 7, 8, 9), /* creates nine columns of equal width */
+	10: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10), /* creates ten columns of equal width */
+	11: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), /* creates eleven columns of equal width */
+	12: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), /* creates twelve columns of equal width */
+);
+
+
+
+
+/* ==================== Image Variables ==================== */
+
+/* Images - Add or subtract image heights (px). */
+$img-heights: (18, 36, 72, 144, 288, 360, 576);
+
+
+
+
+/* ==================== Spacing Variables ==================== */
+
+/* Margins - Add or subtract margin sizes (px). */
+$margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72);
+
+/* Paddings - Add or subtract padding sizes (px). */
+$padding-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72);
+
+
+
+
+/* ==================== Typography Variables ==================== */
+
+/* Fonts - Add or subtract font sizes (px). */
+$fnt-sizes: (10, 12, 16, 21, 24, 30, 60, 64, 90);
+
+/* Line Heights - Add or subtract line heights (%). */
+$ln-heights: (100, 125, 150, 175, 200);
+
+
+
+
+/* ==================== Color Variables ==================== */
+
+/* Colors - Set base colors. */
+$black: #000;
+$white: #fff;
+$gray: #8e8e93;
+$primary: #007aff; /* Blue */
+$success: #28cd41; /* Green */
+$danger: #ff3b30; /* Red */
+$warning: #ff9500; /* Orange */
+$info: #009193; /* Aqua */
+$harvest: #ffcc00; /* Yellow */
+$royal: #af52de; /* Purple */
+
+/* Colors Darkened - Set the percentages by which the base colors are darkened. */
+$darkest: 20%;
+$darker: 15%;
+$dark: 10%;
+
+/* Colors Lightened - Set the percentages by which the base colors are lightened. */
+$lightest: 35%;
+$lighter: 25%;
+$light: 15%;
+
+/* Colors Darkened and Lightened - Directly alter the dark and light version of the base colors. */
+$gray-darkest: darken($gray, $darkest);
+$gray-darker: darken($gray, $darker);
+$gray-dark: darken($gray, $dark);
+$gray-light: lighten($gray, $light);
+$gray-lighter: lighten($gray, $lighter);
+$gray-lightest: lighten($gray, $lightest);
+
+$primary-darkest: darken($primary, $darkest);
+$primary-darker: darken($primary, $darker);
+$primary-dark: darken($primary, $darker);
+$primary-light: lighten($primary, $light);
+$primary-lighter: lighten($primary, $lighter);
+$primary-lightest: lighten($primary, $lightest);
+
+$success-darkest: darken($success, $darkest);
+$success-darker: darken($success, $darker);
+$success-dark: darken($success, $dark);
+$success-light: lighten($success, $light);
+$success-lighter: lighten($success, $lighter);
+$success-lightest: lighten($success, $lightest);
+
+$danger-darkest: darken($danger, $darkest);
+$danger-darker: darken($danger, $darker);
+$danger-dark: darken($danger, $dark);
+$danger-light: lighten($danger, $light);
+$danger-lighter: lighten($danger, $lighter);
+$danger-lightest: lighten($danger, $lightest);
+
+$warning-darkest: darken($warning, $darkest);
+$warning-darker: darken($warning, $darker);
+$warning-dark: darken($warning, $dark);
+$warning-light: lighten($warning, $light);
+$warning-lighter: lighten($warning, $lighter);
+$warning-lightest: lighten($warning, $lightest);
+
+$info-darkest: darken($info, $darkest);
+$info-darker: darken($info, $darker);
+$info-dark: darken($info, $dark);
+$info-light: lighten($info, $light);
+$info-lighter: lighten($info, $lighter);
+$info-lightest: lighten($info, $lightest);
+
+$harvest-darkest: darken($harvest, $darkest);
+$harvest-darker: darken($harvest, $darker);
+$harvest-dark: darken($harvest, $dark);
+$harvest-light: lighten($harvest, $light);
+$harvest-lighter: lighten($harvest, $lighter);
+$harvest-lightest: lighten($harvest, $lightest);
+
+$royal-darkest: darken($royal, $darkest);
+$royal-darker: darken($royal, $darker);
+$royal-dark: darken($royal, $dark);
+$royal-light: lighten($royal, $light);
+$royal-lighter: lighten($royal, $lighter);
+$royal-lightest: lighten($royal, $lightest);
+
+
+
+
+/* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
+
+/* Color Key Value Pairs - Used for generating Background and Text Colors. */
+$colors:(
+	'black': $black,
+	'white': $white,
+
+	'gray-darkest': $gray-darkest,
+	'gray-darker': $gray-darker,
+	'gray-dark': $gray-dark,
+	'gray': $gray,
+	'gray-light': $gray-light,
+	'gray-lighter': $gray-lighter,
+	'gray-lightest': $gray-lightest,
+
+	'primary-darkest': $primary-darkest,
+	'primary-darker': $primary-darker,
+	'primary-dark': $primary-dark,
+	'primary': $primary,
+	'primary-light': $primary-light,
+	'primary-lighter': $primary-lighter,
+	'primary-lightest': $primary-lightest,
+
+	'success-darkest': $success-darkest,
+	'success-darker': $success-darker,
+	'success-dark': $success-dark,
+	'success': $success,
+	'success-light': $success-light,
+	'success-lighter': $success-lighter,
+	'success-lightest': $success-lightest,
+
+	'danger-darkest': $danger-darkest,
+	'danger-darker': $danger-darker,
+	'danger-dark': $danger-dark,
+	'danger': $danger,
+	'danger-light': $danger-light,
+	'danger-lighter': $danger-lighter,
+	'danger-lightest': $danger-lightest,
+
+	'warning-darkest': $warning-darkest,
+	'warning-darker': $warning-darker,
+	'warning-dark': $warning-dark,
+	'warning': $warning,
+	'warning-light': $warning-light,
+	'warning-lighter': $warning-lighter,
+	'warning-lightest': $warning-lightest,
+
+	'info-darkest': $info-darkest,
+	'info-darker': $info-darker,
+	'info-dark': $info-dark,
+	'info': $info,
+	'info-light': $info-light,
+	'info-lighter': $info-lighter,
+	'info-lightest': $info-lightest,
+
+	'harvest-darkest': $harvest-darkest,
+	'harvest-darker': $harvest-darker,
+	'harvest-dark': $harvest-dark,
+	'harvest': $harvest,
+	'harvest-light': $harvest-light,
+	'harvest-lighter': $harvest-lighter,
+	'harvest-lightest': $harvest-lightest,
+
+	'royal-darkest': $royal-darkest,
+	'royal-darker': $royal-darker,
+	'royal-dark': $royal-dark,
+	'royal': $royal,
+	'royal-light': $royal-light,
+	'royal-lighter': $royal-lighter,
+	'royal-lightest': $royal-lightest,
+);
+

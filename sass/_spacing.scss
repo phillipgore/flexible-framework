@@ -1,0 +1,122 @@
+
+/* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
+
+$selectors:(
+	'-t': ('top'),
+	'-r': ('right'),
+	'-b': ('bottom'),
+	'-l': ('left'),
+	'-tr': ('top', 'right'),
+	'-tb': ('top', 'bottom'),
+	'-v': ('top', 'bottom'),
+	'-tl': ('top', 'left'),
+	'-rb': ('right', 'bottom'),
+	'-rl': ('right', 'left'),
+	'-h': ('right', 'left'),
+	'-bl': ('bottom', 'left'),
+	'-trb': ('top', 'right', 'bottom'),
+	'-trl': ('top', 'right', 'bottom'),
+	'-tbl': ('top', 'right', 'bottom'),
+	'-rbl': ('top', 'right', 'bottom'),
+	'-trbl': ('top', 'right', 'bottom', 'left'),
+	'': ('top', 'right', 'bottom', 'left'),
+);
+
+@each $query-label, $query-size in $queries { 
+	/* Media Query for #{$query-size}px and larger screens (#{$query-label}). */
+	@media only screen and (min-width: #{$query-size}px) {
+
+		@each $padding-size in $padding-sizes {
+			/* --------------- Padding #{$padding-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				.p-#{$query-label}#{$selector-label}-#{$padding-size}, .padding-#{$query-label}#{$selector-label}-#{$padding-size} {
+					@each $position in $selector-position {
+						padding-#{$position}: #{$padding-size}px;
+					}
+				}
+			}
+		}
+
+		/* --------------- Margin Auto --------------- */
+		@each $selector-label, $selector-position in $selectors {
+			.m-#{$query-label}#{$selector-label}-auto, .margin-#{$query-label}#{$selector-label}-auto {
+				@each $position in $selector-position {
+					margin-#{$position}: auto;
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Margin #{$margin-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				.m-#{$query-label}#{$selector-label}-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-#{$margin-size} {
+					@each $position in $selector-position {
+						margin-#{$position}: #{$margin-size}px;
+					}
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Negative Margin -#{$margin-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				.m-#{$query-label}#{$selector-label}-neg-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-neg-#{$margin-size} {
+					@each $position in $selector-position {
+						margin-#{$position}: -#{$margin-size}px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+/* Media Query for print. */
+@media print {
+	@each $query-label, $query-size in $queries { 
+
+		@each $padding-size in $padding-sizes {
+			/* --------------- Print - Padding #{$padding-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				[class*='p-#{$query-label}'][class*='#{$selector-label}-#{$padding-size}'], [class*='padding-#{$query-label}'][class*='#{$selector-label}-#{$padding-size}'] {
+					@each $position in $selector-position {
+						padding-#{$position}: #{$padding-size}px;
+					}
+				}
+			}
+		}
+
+		/* --------------- Print - Margin Auto --------------- */
+		@each $selector-label, $selector-position in $selectors {
+			[class*='m-#{$query-label}'][class*='#{$selector-label}-auto'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-auto'] {
+				@each $position in $selector-position {
+					margin-#{$position}: auto;
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Print - Margin #{$margin-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				[class*='m-#{$query-label}'][class*='#{$selector-label}-#{$margin-size}'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-#{$margin-size}'] {
+					@each $position in $selector-position {
+						margin-#{$position}: #{$margin-size}px;
+					}
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Print - Negative Margin -#{$margin-size}px --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				[class*='m-#{$query-label}'][class*='#{$selector-label}-neg-#{$margin-size}'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-neg-#{$margin-size}'] {
+					@each $position in $selector-position {
+						margin-#{$position}: -#{$margin-size}px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
