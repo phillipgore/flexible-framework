@@ -8,7 +8,7 @@ To get started download the zip or clone the repo. Documentation and details can
 
 ## Included Files
 ```
-flexible_framework/
+flexible_framework/sass
 ├── _background-colors.scss
 ├── _grid.scss
 ├── _images.scss
