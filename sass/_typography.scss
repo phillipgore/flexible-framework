@@ -1,36 +1,5 @@
+
 /* --------------- Flexible Typography --------------- */
-
-/* Line Height */
-.ln-height-normal, .line-height-normal { line-height: normal; }
-@each $ln-height in $ln-heights {
-    .ln-height-#{$ln-height}, .line-height-#{$ln-height} { line-height: $ln-height/100; }
-}
-
-/* Text Overflow */
-.txt-overflow-ellipsis, .text-overflow-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.wht-space-nowrap, .white-space-nowrap {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* Font Style */
-$fnt-styles: ('normal', 'italic', 'oblique', 'initial', 'inherit', );
-
-@each $fnt-style in $fnt-styles {
-    .fnt-style-#{$fnt-style}, .font-style-#{$fnt-style} { font-style: #{$fnt-style}; }
-}
-
-/* Font Transform */
-$fnt-transforms: ('capitalize', 'lowercase', 'uppercase' );
-
-@each $fnt-transform in $fnt-transforms {
-    .fnt-transform-#{$fnt-transform}, .font-transform-#{$fnt-transform} { font-transform: #{$fnt-transform}; }
-}
 
 /* Font Weight */
 $fnt-weights: ('normal', 100, 200, 300, 400, 500, 600, 700, 800, 900);
@@ -40,6 +9,39 @@ $fnt-weights: ('normal', 100, 200, 300, 400, 500, 600, 700, 800, 900);
 }
 
 
+/* Font Style */
+$fnt-styles: ('normal', 'italic', 'oblique', 'initial', 'inherit', );
+
+@each $fnt-style in $fnt-styles {
+    .fnt-style-#{$fnt-style}, .font-style-#{$fnt-style} { font-style: #{$fnt-style}; }
+}
+
+
+/* Font Transform */
+$fnt-transforms: ('capitalize', 'lowercase', 'uppercase' );
+
+@each $fnt-transform in $fnt-transforms {
+    .fnt-#{$fnt-transform}, .font-#{$fnt-transform}, .fnt-transform-#{$fnt-transform}, .font-transform-#{$fnt-transform} { font-transform: #{$fnt-transform}; }
+}
+
+/* Text Overflow */
+.txt-ellipsis, .text-ellipsis, .txt-overflow-ellipsis, .text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.txt-nowrap, .wht-space-nowrap, .white-space-nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* Line Height */
+.ln-height-normal, .line-height-normal { line-height: normal; }
+@each $ln-height in $ln-heights {
+    .ln-height-#{$ln-height}, .line-height-#{$ln-height} { line-height: $ln-height/100; }
+}
 
 
 /* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
@@ -52,7 +54,7 @@ $alignments: ('center', 'left', 'right', 'justify');
     @media only screen and (min-width: #{$query-size}px) {
         /* TXT Align (#{$query-label}) */
         @each $alignment in $alignments {
-            .txt-align-#{$query-label}-#{$alignment}, .text-align-#{$query-label}-#{$alignment} {text-align: #{$alignment}}
+            .txt-#{$query-label}-#{$alignment}, .text-#{$query-label}-#{$alignment}, .txt-align-#{$query-label}-#{$alignment}, .text-align-#{$query-label}-#{$alignment} {text-align: #{$alignment}}
         }
     }
 }

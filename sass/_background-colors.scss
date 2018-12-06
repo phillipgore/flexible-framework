@@ -3,5 +3,5 @@
 
 /* Background Colors */
 @each $color-name, $color in $colors {
-	.bg-color-#{$color-name}, .background-color-#{$color-name} { background-color: #{$color} };
+	.bg-#{$color-name}, .bg-color-#{$color-name}, .background-color-#{$color-name} { background-color: #{$color} };
 }
