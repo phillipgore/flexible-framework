@@ -74,7 +74,7 @@ $containers:(
 		}
 
 		/* Offsets (#{$query-label}) */
-		.offset-#{$query-label}-0 {margin-left: 0px;}
+		.off-#{$query-label}-0, .offset-#{$query-label}-0 {margin-left: 0px;}
 		@each $span-numerator, $span-denominators in $columns {
 			@each $span-denominator in $span-denominators {
 				.off-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .offset-#{$query-label}-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
