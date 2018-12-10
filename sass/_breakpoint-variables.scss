@@ -1,0 +1,40 @@
+/* --------------- Breakpoint Variables --------------- */
+
+/* Media Quieries - Add, subtract or alter breakpoints (px). We reccomend only alter the value not the key in the key value pair. */
+$queries:(
+    'tn': 0, /* We reccomend you NOT change 'tn' from 0. */
+    'xs': 480,
+    'sm': 640,
+    'md': 768,
+    'lg': 992,
+    'xl': 1200,
+);
+
+/* --------------- /Breakpoint Variables --------------- */
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Margin & Padding - Placement selectors. */
+$selectors:(
+	'-t': ('top'),
+	'-r': ('right'),
+	'-b': ('bottom'),
+	'-l': ('left'),
+	'-tr': ('top', 'right'),
+	'-tb': ('top', 'bottom'),
+	'-v': ('top', 'bottom'),
+	'-tl': ('top', 'left'),
+	'-rb': ('right', 'bottom'),
+	'-rl': ('right', 'left'),
+	'-h': ('right', 'left'),
+	'-bl': ('bottom', 'left'),
+	'-trb': ('top', 'right', 'bottom'),
+	'-trl': ('top', 'right', 'left'),
+	'-tbl': ('top', 'bottom', 'left'),
+	'-rbl': ('right', 'bottom', 'left'),
+	'-trbl': ('top', 'right', 'bottom', 'left'),
+	'': ('top', 'right', 'bottom', 'left'),
+);
+

@@ -1,0 +1,18 @@
+// REQUIRMENTS: _breakpoint-variables.scss
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Text Alignment */
+$alignments: ('center', 'left', 'right', 'justify');
+
+@each $query-label, $query-size in $queries { 
+    /* Media Query for #{$query-size}px and larger screens (#{$query-label}). */
+    @media only screen and (min-width: #{$query-size}px) {
+        /* TXT Align (#{$query-label}) */
+        @each $alignment in $alignments {
+            .txt-#{$query-label}-#{$alignment}, .text-#{$query-label}-#{$alignment}, .txt-align-#{$query-label}-#{$alignment}, .text-align-#{$query-label}-#{$alignment} {text-align: #{$alignment}}
+        }
+    }
+}

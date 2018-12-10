@@ -1,0 +1,11 @@
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Text Transform */
+$txt-transforms: ('none', 'capitalize', 'lowercase', 'uppercase', 'initial', 'inherit' );
+
+@each $txt-transform in $txt-transforms {
+    .txt-#{$txt-transform}, .txt-transform-#{$txt-transform}, .text-transform-#{$txt-transform} { font-transform: #{$txt-transform}; }
+}

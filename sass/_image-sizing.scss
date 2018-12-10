@@ -1,3 +1,10 @@
+// REQUIRMENTS: _breakpoint-variables.scss
+
+/* ==================== Image Variables ==================== */
+
+/* Images - Add or subtract image heights (px). */
+$img-heights: (36, 72, 144, 288);
+
 
 /* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
 
@@ -13,4 +20,11 @@
 			}
 		}
 	}
+}
+
+
+.img-flex, .image-flex{
+    display:block;
+    max-width:100%;
+    height:auto
 }

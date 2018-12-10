@@ -1,9 +1,18 @@
-@import 'variable-settings';
+@import 'color-variables';
+@import 'breakpoint-variables';
 
+@import 'background-color';
+@import 'color';
+@import 'display';
+@import 'float';
+@import 'font-size';
+@import 'font-style';
+@import 'font-weight';
 @import 'grid';
-@import 'images';
-@import 'spacing';
-@import 'typography';
-@import 'background-colors';
-@import 'text-colors';
-
+@import 'image-sizing';
+@import 'line-height';
+@import 'margin';
+@import 'padding';
+@import 'text-align';
+@import 'text-decoration-line';
+@import 'text-transform';

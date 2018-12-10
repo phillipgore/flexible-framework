@@ -1,0 +1,11 @@
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Text Decoration Lines */
+$txt-decoration-lines: ('none', 'underline', 'overline', 'line-through', 'initial', 'inherit' );
+
+@each $txt-decoration-line in $txt-decoration-lines {
+    .txt-decoration-line-#{$txt-decoration-line}, .text-decoration-line-#{$txt-decoration-line} { text-decoration-line: #{$txt-decoration-line}; }
+}

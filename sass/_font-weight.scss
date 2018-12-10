@@ -1,0 +1,9 @@
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Font Weight */
+$fnt-weights: ('normal', 'bold', 'bolder', 'lighter', 100, 200, 300, 400, 500, 600, 700, 800, 900, 'initial', 'inherit');
+
+@each $fnt-weight in $fnt-weights {
+    .fnt-weight-#{$fnt-weight}, .font-weight-#{$fnt-weight} { font-weight: #{$fnt-weight}; }
+}

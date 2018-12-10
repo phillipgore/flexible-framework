@@ -1,5 +1,8 @@
+// REQUIRMENTS: _color-variables.scss
 
-/* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
 
 /* Background Colors */
 @each $color-name, $color in $colors {

@@ -9,13 +9,23 @@ To get started download the zip or clone the repo. Documentation and details can
 ## Included Files
 ```
 flexible_framework/sass
-├── _background-colors.scss
+├── _background-color.scss
+├── _breakpoint-variables.scss
+├── _color-variables.scss
+├── _color.scss
+├── _display.scss
+├── _float.scss
+├── _font-size.scss
+├── _font-style.scss
+├── _font-weight.scss
 ├── _grid.scss
-├── _images.scss
-├── _spacing.scss
-├── _text-colors.scss
-├── _typography.scss
-├── _variable-settings.scss
+├── _image-szing.scss
+├── _line-height.scss
+├── _margin.scss
+├── _padding.scss
+├── _text-align.scss
+├── _text-decoration-lines.scss
+├── _text-transform.scss
 ├── flexible-styles.scss
 
 ```

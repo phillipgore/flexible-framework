@@ -1,0 +1,10 @@
+// REQUIRMENTS: _color-variables.scss
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Text Colors */
+@each $color-name, $color in $colors {
+	.cl-#{$color-name}, .color-#{$color-name} { color: #{$color} };
+}

@@ -1,0 +1,23 @@
+// REQUIRMENTS: _breakpoint-variables.scss
+
+/* --------------- Font Size Variables --------------- */
+
+/* Add or subtract font sizes (px). Be careful. Because font sizes are tied to breakpoints your css can get rather large. */
+$fnt-sizes: (10, 12, 14, 16);
+
+/* --------------- /Font Size Variables --------------- */
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Font Sizes */
+@each $query-label, $query-size in $queries { 
+    /* Media Query for #{$query-size}px and larger screens (#{$query-label}). */
+    @media only screen and (min-width: #{$query-size}px) {
+        /* Font Size (#{$query-label}) */
+        @each $fnt-size in $fnt-sizes {
+            .fnt-size-#{$query-label}-#{$fnt-size}, .font-size-#{$query-label}-#{$fnt-size} {font-size: #{$fnt-size}px}
+        }
+    }
+}

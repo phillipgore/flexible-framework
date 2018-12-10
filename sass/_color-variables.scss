@@ -1,70 +1,4 @@
-/* ==================== Media Query Variables ==================== */
-
-/* Media Quieries - Add, subtract or alter breakpoints (px). We reccomend only alter the value not the key in the key value pair. */
-$queries:(
-    'tn': 0, /* We reccomend you NOT change 'tn' from 0. */
-    'xs': 480,
-    'sm': 640,
-    'md': 768,
-    'lg': 896,
-    'xl': 1200,
-);
-
-
-
-
-/* ==================== Grid Variables ==================== */
-
-/* Columns - Add or subtract various column breakdowns. Follow the pattern when adding. */
-$columns: (
-	1: (1), /* creates one column */
-	2: (1, 2), /* creates two columns of equal width */
-	3: (1, 2, 3), /* creates three columns of equal width */
-	4: (1, 2, 3, 4), /* creates four columns of equal width */
-	5: (1, 2, 3, 4, 5), /* creates five columns of equal width */
-	6: (1, 2, 3, 4, 5, 6), /* creates six columns of equal width */
-	7: (1, 2, 3, 4, 5, 6, 7), /* creates seven columns of equal width */
-	8: (1, 2, 3, 4, 5, 6, 7, 8), /* creates eight columns of equal width */
-	9: (1, 2, 3, 4, 5, 6, 7, 8, 9), /* creates nine columns of equal width */
-	10: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10), /* creates ten columns of equal width */
-	11: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), /* creates eleven columns of equal width */
-	12: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), /* creates twelve columns of equal width */
-);
-
-
-
-
-/* ==================== Image Variables ==================== */
-
-/* Images - Add or subtract image heights (px). */
-$img-heights: (18, 36, 72, 144, 288, 360, 576);
-
-
-
-
-/* ==================== Spacing Variables ==================== */
-
-/* Margins - Add or subtract margin sizes (px). */
-$margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72);
-
-/* Paddings - Add or subtract padding sizes (px). */
-$padding-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72);
-
-
-
-
-/* ==================== Typography Variables ==================== */
-
-/* Fonts - Add or subtract font sizes (px). */
-$fnt-sizes: (10, 12, 16, 21, 24, 30, 60, 64, 90);
-
-/* Line Heights - Add or subtract line heights (%). */
-$ln-heights: (100, 125, 150, 175, 200);
-
-
-
-
-/* ==================== Color Variables ==================== */
+/* --------------- Color Variables --------------- */
 
 /* Colors - Set base colors. */
 $black: #000;
@@ -79,16 +13,16 @@ $harvest: #ffcc00; /* Yellow */
 $royal: #af52de; /* Purple */
 
 /* Colors Darkened - Set the percentages by which the base colors are darkened. */
-$darkest: 20%;
+$darkest: 25%;
 $darker: 15%;
-$dark: 10%;
+$dark: 5%;
 
 /* Colors Lightened - Set the percentages by which the base colors are lightened. */
 $lightest: 35%;
 $lighter: 25%;
 $light: 15%;
 
-/* Colors Darkened and Lightened - Directly alter the dark and light version of the base colors. */
+/* Colors Darkened & Lightened - Directly alter the dark and light version of the base colors. */
 $gray-darkest: darken($gray, $darkest);
 $gray-darker: darken($gray, $darker);
 $gray-dark: darken($gray, $dark);
@@ -145,10 +79,11 @@ $royal-light: lighten($royal, $light);
 $royal-lighter: lighten($royal, $lighter);
 $royal-lightest: lighten($royal, $lightest);
 
+/* --------------- /Color Variables --------------- */
 
 
 
-/* --------------- Be carful making changes to the code below. It's not recomended. --------------- */
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
 
 /* Color Key Value Pairs - Used for generating Background and Text Colors. */
 $colors:(
