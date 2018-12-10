@@ -4,7 +4,7 @@ Flexible Framework is an ever-growing collection of useful and customizable SASS
 
 ## Quick Start
 
-To get started download the zip or clone the repo. Documentation and details can be found at [Phillip Gore Design: Flexible Framework](https://www.phillipgoredesign.com/flexible-framework "Phillip Gore Design"). That's the best place to start.
+To get started download the zip or clone the repo. Documentation and details can be found at [Phillip Gore Design: Flexible Framework](https://www.phillipgoredesign.com/flexible-framework/flexible-framework "Phillip Gore Design"). That's the best place to start.
 
 ## Included Files
 ```
