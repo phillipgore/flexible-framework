@@ -30,6 +30,11 @@ flexible_framework/sass
 
 ```
 
+## Requirements
+
+Flexible Framework is modular. Some files can be used on their own. Some of them must be used in conjuction with `_breakpoint-variables.scss` or `_color-variables.scss`. Check the documentation.
+
+
 ## Current Features
 
 Flexible Framework will continue to grow but currently includes the following features:
