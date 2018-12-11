@@ -36,16 +36,16 @@ $containers:(
 
 /* Everything is set to border-box. */
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Set a clearix for rows and any element given the class "row" or "clearfix". */
-.row:after, .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 [class*='col-'] {
