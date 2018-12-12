@@ -16,3 +16,46 @@
 @import 'text-align';
 @import 'text-decoration-line';
 @import 'text-transform';
+
+
+/* Media Query for tn. */
+@media only screen and (min-width: #{map-get($queries, 'tn')}px) {
+    /* Place your tn code here. */
+	
+		
+}
+
+/* Media Query for xs. */
+@media only screen and (min-width: #{map-get($queries, 'xs')}px) {
+    /* Place your xs code here. */
+
+		
+}
+
+/* Media Query for sm. */
+@media only screen and (min-width: #{map-get($queries, 'sm')}px) {
+    /* Place your sm code here. */
+
+		
+}
+
+/* Media Query for md. */
+@media only screen and (min-width: #{map-get($queries, 'md')}px) {
+    /* Place your md code here. */
+
+		
+}
+
+/* Media Query for lg. */
+@media only screen and (min-width: #{map-get($queries, 'lg')}px) {
+    /* Place your lg code here. */
+
+		
+}
+
+/* Media Query for xl. */
+@media only screen and (min-width: #{map-get($queries, 'xl')}px) {
+    /* Place your xl code here. */
+
+		
+}
