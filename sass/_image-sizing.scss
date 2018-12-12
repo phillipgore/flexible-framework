@@ -21,12 +21,17 @@ $img-heights: (36, 72, 144, 288);
 				width: auto;
 			}
 		}
+
+		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
+			height: auto; 
+			width: auto;
+		}
+
+		/* Image Flex (#{$query-label}) */
+		.img-#{$query-label}-flex, .image-#{$query-label}-flex{
+		    display:block;
+		    max-width:100%;
+		    height:auto
+		}
 	}
-}
-
-
-.img-flex, .image-flex{
-    display:block;
-    max-width:100%;
-    height:auto
 }
