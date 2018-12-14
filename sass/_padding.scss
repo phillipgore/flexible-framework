@@ -30,14 +30,17 @@ $padding-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36
 	}
 }
 
+
+
+
 /* Print Padding */
 @media print {
 	@each $query-label, $query-size in $queries { 
 
 		@each $padding-size in $padding-sizes {
-			/* --------------- Print - Padding #{$padding-size}px --------------- */
+			/* --------------- Print - Padding --------------- */
 			@each $selector-label, $selector-position in $selectors {
-				[class*='p-#{$query-label}'][class*='#{$selector-label}-#{$padding-size}'], [class*='padding-#{$query-label}'][class*='#{$selector-label}-#{$padding-size}'] {
+				.p-#{$query-label}#{$selector-label}-#{$padding-size}, .padding-#{$query-label}#{$selector-label}-#{$padding-size} {
 					@each $position in $selector-position {
 						padding-#{$position}: #{$padding-size}px;
 					}

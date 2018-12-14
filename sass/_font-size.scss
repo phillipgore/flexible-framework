@@ -21,3 +21,16 @@ $fnt-sizes: (10, 12, 14, 16);
         }
     }
 }
+
+
+
+
+/* Print - Font Sizes */
+@media print {
+    @each $query-label, $query-size in $queries { 
+        /* Font Size (#{$query-label}) */
+        @each $fnt-size in $fnt-sizes {
+            .fnt-size-#{$query-label}-#{$fnt-size}, .font-size-#{$query-label}-#{$fnt-size} {font-size: #{$fnt-size}px}
+        }
+    }
+}

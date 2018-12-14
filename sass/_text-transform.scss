@@ -7,5 +7,5 @@
 $txt-transforms: ('none', 'capitalize', 'lowercase', 'uppercase', 'initial', 'inherit' );
 
 @each $txt-transform in $txt-transforms {
-    .txt-#{$txt-transform}, .txt-transform-#{$txt-transform}, .text-transform-#{$txt-transform} { font-transform: #{$txt-transform}; }
+    .txt-#{$txt-transform}, .txt-transform-#{$txt-transform}, .text-transform-#{$txt-transform} { text-transform: #{$txt-transform}; }
 }

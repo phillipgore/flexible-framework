@@ -50,13 +50,16 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 	}
 }
 
+
+
+
 /* Print Margins */
 @media print {
 	@each $query-label, $query-size in $queries {
 
 		/* --------------- Print - Margin Auto --------------- */
 		@each $selector-label, $selector-position in $selectors {
-			[class*='m-#{$query-label}'][class*='#{$selector-label}-auto'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-auto'] {
+			.m-#{$query-label}#{$selector-label}-auto, .margin-#{$query-label}#{$selector-label}-auto {
 				@each $position in $selector-position {
 					margin-#{$position}: auto;
 				}
@@ -64,9 +67,9 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 		}
 
 		@each $margin-size in $margin-sizes {
-			/* --------------- Print - Margin #{$margin-size}px --------------- */
+			/* --------------- Print - Margin --------------- */
 			@each $selector-label, $selector-position in $selectors {
-				[class*='m-#{$query-label}'][class*='#{$selector-label}-#{$margin-size}'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-#{$margin-size}'] {
+				.m-#{$query-label}#{$selector-label}-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-#{$margin-size} {
 					@each $position in $selector-position {
 						margin-#{$position}: #{$margin-size}px;
 					}
@@ -75,9 +78,9 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 		}
 
 		@each $margin-size in $margin-sizes {
-			/* --------------- Print - Negative Margin -#{$margin-size}px --------------- */
+			/* --------------- Print - Negative Margin --------------- */
 			@each $selector-label, $selector-position in $selectors {
-				[class*='m-#{$query-label}'][class*='#{$selector-label}-neg-#{$margin-size}'], [class*='margin-#{$query-label}'][class*='#{$selector-label}-neg-#{$margin-size}'] {
+				.m-#{$query-label}#{$selector-label}-neg-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-neg-#{$margin-size} {
 					@each $position in $selector-position {
 						margin-#{$position}: -#{$margin-size}px;
 					}

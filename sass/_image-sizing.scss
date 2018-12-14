@@ -17,21 +17,51 @@ $img-heights: (36, 72, 144, 288);
 		/* Image Heights (#{$query-label}) */
 		@each $img-height in $img-heights {
 			.img-height-#{$query-label}-#{$img-height}, .image-height-#{$query-label}-#{$img-height} { 
-				height: #{$img-height}; 
+				height: #{$img-height}px; 
 				width: auto;
 			}
 		}
 
+		/* Image Auto (#{$query-label}) */
 		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
 			height: auto; 
 			width: auto;
 		}
 
 		/* Image Flex (#{$query-label}) */
-		.img-#{$query-label}-flex, .image-#{$query-label}-flex{
+		.img-#{$query-label}-flex, .image-#{$query-label}-flex {
 		    display:block;
 		    max-width:100%;
 		    height:auto
+		}
+	}
+}
+
+
+
+
+/* Print - Image Size */
+@media print {
+	@each $query-label, $query-size in $queries {
+		/* Print - Image Heights */
+		@each $img-height in $img-heights {
+			.img-height-#{$query-label}-#{$img-height}, .image-height-#{$query-label}-#{$img-height} { 
+				height: #{$img-height}px; 
+				width: auto;
+			}
+		}
+
+		/* Print - Image Auto */
+		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
+			height: auto; 
+			width: auto;
+		}
+
+		/* Print - Image Flex */
+		.img-#{$query-label}-flex, .image-#{$query-label}-flex {
+			display:block;
+			max-width:100%;
+			height:auto
 		}
 	}
 }

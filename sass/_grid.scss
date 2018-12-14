@@ -51,7 +51,7 @@ $containers:(
 [class*='col-'] {
 	width: 100%;
 	float: left;
-	positon: relative;
+	position: relative;
 }
 
 @each $container-label, $container-size in $containers { 
@@ -81,5 +81,53 @@ $containers:(
 			}
 		}
 		
+	}
+}
+
+
+
+
+/* Print - Grid */
+@media print {
+	/* Print - Everything is set to border-box. */
+	*, *:after, *:before {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	/* Print - Set a clearix for rows and any element given the class "row" or "clearfix". */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	[class*='col-'] {
+		width: 100%;
+		float: left;
+		position: relative;
+	}
+
+	@each $container-label, $container-size in $containers { 
+		/* Print - Container (#{$container-label}) */
+		.container-#{$container-label} { width: #{$container-size}px; margin: 0px auto; }
+	}
+
+	@each $query-label, $query-size in $queries { 
+		/* Print - Columns (#{$query-label}) */
+		@each $span-numerator, $span-denominators in $columns {
+			@each $span-denominator in $span-denominators {
+				.col-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .column-#{$query-label}-#{$span-denominator}of#{$span-numerator} {width: percentage($span-denominator / $span-numerator);}
+			}
+		}
+
+		/* Print - Offsets (#{$query-label}) */
+		.off-#{$query-label}-0, .offset-#{$query-label}-0 {margin-left: 0px;}
+		@each $span-numerator, $span-denominators in $columns {
+			@each $span-denominator in $span-denominators {
+				.off-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .offset-#{$query-label}-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
+			}
+		}
 	}
 }

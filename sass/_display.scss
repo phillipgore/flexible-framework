@@ -3,7 +3,7 @@
 /* --------------- Display Variables --------------- */
 
 /* Display - The following display values are the most common. However, there are other values you can add. Be careful. Because display values are tied to breakpoints your css can get rather large. */
-$displays: ('block', 'inline', 'inline-block', 'none');
+$displays: ('block', 'inline', 'inline-block', 'none', 'flex');
 
 /* --------------- /Display Variables --------------- */
 
@@ -24,5 +24,21 @@ $displays: ('block', 'inline', 'inline-block', 'none');
 			}
 		}
 		
+	}
+}
+
+
+
+
+/* Print - Displays */
+@media print {
+	@each $query-label, $query-size in $queries { 
+		/* Print - Displays */
+		@each $display in $displays {
+			.dis-#{$query-label}-#{$display}, .display-#{$query-label}-#{$display} { 
+				display: #{$display}; 
+				@if $display == "block" {width: 100%;} 
+			}
+		}
 	}
 }

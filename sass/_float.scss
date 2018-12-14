@@ -29,3 +29,16 @@ $floats: ('left', 'right', 'none');
 
 	}
 }
+
+
+
+
+/* Print - Floats */
+@media print {
+	@each $query-label, $query-size in $queries {
+		/* Floats (#{$query-label}) */
+		@each $float in $floats {
+			.fl-#{$query-label}-#{$float}, .float-#{$query-label}-#{$float} { float: #{$float}; }
+		}
+	}
+}
