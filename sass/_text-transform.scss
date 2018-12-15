@@ -9,3 +9,11 @@ $txt-transforms: ('none', 'capitalize', 'lowercase', 'uppercase', 'initial', 'in
 @each $txt-transform in $txt-transforms {
     .txt-#{$txt-transform}, .txt-transform-#{$txt-transform}, .text-transform-#{$txt-transform} { text-transform: #{$txt-transform}; }
 }
+
+
+
+
+/* Print - Text Transform (pr) */
+@each $txt-transform in $txt-transforms {
+    .txt-pr-#{$txt-transform}, .txt-transform-pr-#{$txt-transform}, .text-transform-pr-#{$txt-transform} { text-transform: #{$txt-transform}; }
+}

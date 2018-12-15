@@ -14,3 +14,12 @@ $ln-heights: (100, 125, 150, 175, 200);
 @each $ln-height in $ln-heights {
     .ln-height-#{$ln-height}, .line-height-#{$ln-height} { line-height: $ln-height/100; }
 }
+
+
+
+
+/* Print - Line Height (pr) */
+.ln-height-normal, .line-height-normal { line-height: normal; }
+@each $ln-height in $ln-heights {
+    .ln-height-pr-#{$ln-height}, .line-height-pr-#{$ln-height} { line-height: $ln-height/100; }
+}

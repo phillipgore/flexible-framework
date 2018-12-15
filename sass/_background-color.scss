@@ -6,5 +6,15 @@
 
 /* Background Colors */
 @each $color-name, $color in $colors {
-	.bg-#{$color-name}, .bg-color-#{$color-name}, .background-color-#{$color-name} { background-color: #{$color} };
+	.bg-#{$color-name}, .bg-color-#{$color-name}, .background-color-#{$color-name} { background-color: #{$color}; };
+}
+
+
+
+
+/* Print - Background Colors (pr) */
+@media print {
+	@each $color-name, $color in $colors {
+		.bg-pr-#{$color-name}, .bg-color-pr-#{$color-name}, .background-color-pr-#{$color-name} { background-color: #{$color}; };
+	}
 }

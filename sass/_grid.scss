@@ -87,7 +87,7 @@ $containers:(
 
 
 
-/* Print - Grid */
+/* Print */
 @media print {
 	/* Print - Everything is set to border-box. */
 	*, *:after, *:before {
@@ -110,24 +110,39 @@ $containers:(
 	}
 
 	@each $container-label, $container-size in $containers { 
-		/* Print - Container (#{$container-label}) */
+		/* Print Set - Container (#{$container-label}) */
 		.container-#{$container-label} { width: #{$container-size}px; margin: 0px auto; }
 	}
 
 	@each $query-label, $query-size in $queries { 
-		/* Print - Columns (#{$query-label}) */
+		/* Print Set - Columns (#{$query-label}) */
 		@each $span-numerator, $span-denominators in $columns {
 			@each $span-denominator in $span-denominators {
 				.col-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .column-#{$query-label}-#{$span-denominator}of#{$span-numerator} {width: percentage($span-denominator / $span-numerator);}
 			}
 		}
 
-		/* Print - Offsets (#{$query-label}) */
+		/* Print Set - Offsets (#{$query-label}) */
 		.off-#{$query-label}-0, .offset-#{$query-label}-0 {margin-left: 0px;}
 		@each $span-numerator, $span-denominators in $columns {
 			@each $span-denominator in $span-denominators {
 				.off-#{$query-label}-#{$span-denominator}of#{$span-numerator}, .offset-#{$query-label}-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
 			}
+		}
+	}
+
+	/* Print - Columns (pr) */
+	@each $span-numerator, $span-denominators in $columns {
+		@each $span-denominator in $span-denominators {
+			.col-pr-#{$span-denominator}of#{$span-numerator}, .column-pr-#{$span-denominator}of#{$span-numerator} {width: percentage($span-denominator / $span-numerator);}
+		}
+	}
+
+	/* Print - Offsets (pr) */
+	.off-#{$query-label}-0, .offset-#{$query-label}-0 {margin-left: 0px;}
+	@each $span-numerator, $span-denominators in $columns {
+		@each $span-denominator in $span-denominators {
+			.off-pr-#{$span-denominator}of#{$span-numerator}, .offset-pr-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
 		}
 	}
 }

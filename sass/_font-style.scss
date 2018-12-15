@@ -2,8 +2,16 @@
 /* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
 
 /* Font Style */
-$fnt-styles: ('normal', 'italic', 'oblique', 'initial', 'inherit', );
+$fnt-styles: ('normal', 'italic', 'oblique', 'initial', 'inherit' );
 
 @each $fnt-style in $fnt-styles {
     .fnt-style-#{$fnt-style}, .font-style-#{$fnt-style} { font-style: #{$fnt-style}; }
+}
+
+
+
+
+/* Print - Font Style (pr) */
+@each $fnt-style in $fnt-styles {
+    .fnt-style-pr-#{$fnt-style}, .font-style-pr-#{$fnt-style} { font-style: #{$fnt-style}; }
 }

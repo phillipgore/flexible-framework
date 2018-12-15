@@ -30,15 +30,23 @@ $displays: ('block', 'inline', 'inline-block', 'none', 'flex');
 
 
 
-/* Print - Displays */
+/* Print */
 @media print {
 	@each $query-label, $query-size in $queries { 
-		/* Print - Displays */
+		/* Print Set - Displays (#{$query-label}) */
 		@each $display in $displays {
 			.dis-#{$query-label}-#{$display}, .display-#{$query-label}-#{$display} { 
 				display: #{$display}; 
 				@if $display == "block" {width: 100%;} 
 			}
+		}
+	}
+
+	/* Print - Displays (pr) */
+	@each $display in $displays {
+		.dis-pr-#{$display}, .display-pr-#{$display} { 
+			display: #{$display}; 
+			@if $display == "block" {width: 100%;} 
 		}
 	}
 }

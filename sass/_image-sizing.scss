@@ -3,7 +3,7 @@
 /* --------------- Image Variables --------------- */
 
 /* Images - Add or subtract image heights (px). */
-$img-heights: (36, 72, 144, 288);
+$img-heights: (36, 72, 90, 144, 288);
 
 /* --------------- /Image Variables --------------- */
 
@@ -40,10 +40,10 @@ $img-heights: (36, 72, 144, 288);
 
 
 
-/* Print - Image Size */
+/* Print */
 @media print {
 	@each $query-label, $query-size in $queries {
-		/* Print - Image Heights */
+		/* Print Set - Image Heights (#{$query-label}) */
 		@each $img-height in $img-heights {
 			.img-height-#{$query-label}-#{$img-height}, .image-height-#{$query-label}-#{$img-height} { 
 				height: #{$img-height}px; 
@@ -51,17 +51,38 @@ $img-heights: (36, 72, 144, 288);
 			}
 		}
 
-		/* Print - Image Auto */
+		/* Print Set - Image Auto (#{$query-label}) */
 		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
 			height: auto; 
 			width: auto;
 		}
 
-		/* Print - Image Flex */
+		/* Print Set - Image Flex (#{$query-label}) */
 		.img-#{$query-label}-flex, .image-#{$query-label}-flex {
 			display:block;
 			max-width:100%;
 			height:auto
 		}
+	}
+
+	/* Print - Image Heights (pr) */
+	@each $img-height in $img-heights {
+		.img-height-pr-#{$img-height}, .image-height-pr-#{$img-height} { 
+			height: #{$img-height}px; 
+			width: auto;
+		}
+	}
+
+	/* Print - Image Auto (pr) */
+	.img-height-pr-auto, .image-height-pr-auto { 
+		height: auto; 
+		width: auto;
+	}
+
+	/* Print - Image Flex (pr) */
+	.img-pr-flex, .image-pr-flex {
+		display:block;
+		max-width:100%;
+		height:auto
 	}
 }

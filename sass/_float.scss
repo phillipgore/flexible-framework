@@ -33,12 +33,23 @@ $floats: ('left', 'right', 'none');
 
 
 
-/* Print - Floats */
+/* Print */
 @media print {
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
 	@each $query-label, $query-size in $queries {
-		/* Floats (#{$query-label}) */
+		/* Print Set - Floats (#{$query-label}) */
 		@each $float in $floats {
 			.fl-#{$query-label}-#{$float}, .float-#{$query-label}-#{$float} { float: #{$float}; }
 		}
+	}
+
+	/* Print - Floats (pr) */
+	@each $float in $floats {
+		.fl-pr-#{$float}, .float-pr-#{$float} { float: #{$float}; }
 	}
 }

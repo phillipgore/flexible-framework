@@ -25,12 +25,17 @@ $fnt-sizes: (10, 12, 14, 16);
 
 
 
-/* Print - Font Sizes */
+/* Print */
 @media print {
     @each $query-label, $query-size in $queries { 
-        /* Font Size (#{$query-label}) */
+        /* Print Set - Font Sizes (#{$query-label}) */
         @each $fnt-size in $fnt-sizes {
             .fnt-size-#{$query-label}-#{$fnt-size}, .font-size-#{$query-label}-#{$fnt-size} {font-size: #{$fnt-size}px}
         }
+    }
+
+    /* Print - Font Sizes (pr) */
+    @each $fnt-size in $fnt-sizes {
+        .fnt-size-pr-#{$fnt-size}, .font-size-pr-#{$fnt-size} {font-size: #{$fnt-size}px}
     }
 }

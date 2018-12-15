@@ -3,7 +3,7 @@
 /* --------------- Margin Variables --------------- */
 
 /* Margins - Add or subtract margin sizes (px). */
-$margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72);
+$margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 45, 50, 54, 63, 72, 144);
 
 /* --------------- /Margin Variables --------------- */
 
@@ -53,7 +53,7 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 
 
 
-/* Print Margins */
+/* Print */
 @media print {
 	@each $query-label, $query-size in $queries {
 
@@ -67,7 +67,7 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 		}
 
 		@each $margin-size in $margin-sizes {
-			/* --------------- Print - Margin --------------- */
+			/* --------------- Print - Margin #{$margin-size}px --------------- */
 			@each $selector-label, $selector-position in $selectors {
 				.m-#{$query-label}#{$selector-label}-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-#{$margin-size} {
 					@each $position in $selector-position {
@@ -78,7 +78,7 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 		}
 
 		@each $margin-size in $margin-sizes {
-			/* --------------- Print - Negative Margin --------------- */
+			/* --------------- Print - Negative Margin -#{$margin-size}px --------------- */
 			@each $selector-label, $selector-position in $selectors {
 				.m-#{$query-label}#{$selector-label}-neg-#{$margin-size}, .margin-#{$query-label}#{$selector-label}-neg-#{$margin-size} {
 					@each $position in $selector-position {
@@ -89,4 +89,35 @@ $margin-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36,
 		}
 
 	}
+
+	/* --------------- Print - Margin Auto (pr) --------------- */
+		@each $selector-label, $selector-position in $selectors {
+			.m-pr#{$selector-label}-auto, .margin-pr#{$selector-label}-auto {
+				@each $position in $selector-position {
+					margin-#{$position}: auto;
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Print - Margin (pr) --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				.m-pr#{$selector-label}-#{$margin-size}, .margin-pr#{$selector-label}-#{$margin-size} {
+					@each $position in $selector-position {
+						margin-#{$position}: #{$margin-size}px;
+					}
+				}
+			}
+		}
+
+		@each $margin-size in $margin-sizes {
+			/* --------------- Print - Negative Margin (pr) --------------- */
+			@each $selector-label, $selector-position in $selectors {
+				.m-pr#{$selector-label}-neg-#{$margin-size}, .margin-pr#{$selector-label}-neg-#{$margin-size} {
+					@each $position in $selector-position {
+						margin-#{$position}: -#{$margin-size}px;
+					}
+				}
+			}
+		}
 }

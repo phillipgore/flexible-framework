@@ -33,12 +33,11 @@ $padding-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36
 
 
 
-/* Print Padding */
+/* Print */
 @media print {
 	@each $query-label, $query-size in $queries { 
-
 		@each $padding-size in $padding-sizes {
-			/* --------------- Print - Padding --------------- */
+			/* --------------- Print Set - Padding #{$padding-size}px --------------- */
 			@each $selector-label, $selector-position in $selectors {
 				.p-#{$query-label}#{$selector-label}-#{$padding-size}, .padding-#{$query-label}#{$selector-label}-#{$padding-size} {
 					@each $position in $selector-position {
@@ -48,5 +47,16 @@ $padding-sizes:(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36
 			}
 		}
 
+	}
+
+	@each $padding-size in $padding-sizes {
+		/* --------------- Print - Padding (pr) --------------- */
+		@each $selector-label, $selector-position in $selectors {
+			.p-pr#{$selector-label}-#{$padding-size}, .padding-pr#{$selector-label}-#{$padding-size} {
+				@each $position in $selector-position {
+					padding-#{$position}: #{$padding-size}px;
+				}
+			}
+		}
 	}
 }

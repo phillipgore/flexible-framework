@@ -7,3 +7,11 @@ $fnt-weights: ('normal', 'bold', 'bolder', 'lighter', 100, 200, 300, 400, 500, 6
 @each $fnt-weight in $fnt-weights {
     .fnt-weight-#{$fnt-weight}, .font-weight-#{$fnt-weight} { font-weight: #{$fnt-weight}; }
 }
+
+
+
+
+/* Print - Font Weight (pr) */
+@each $fnt-weight in $fnt-weights {
+    .fnt-weight-pr-#{$fnt-weight}, .font-weight-pr-#{$fnt-weight} { font-weight: #{$fnt-weight}; }
+}
