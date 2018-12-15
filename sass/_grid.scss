@@ -139,7 +139,7 @@ $containers:(
 	}
 
 	/* Print - Offsets (pr) */
-	.off-#{$query-label}-0, .offset-#{$query-label}-0 {margin-left: 0px;}
+	.off-pr-0, .offset-pr-0 {margin-left: 0px;}
 	@each $span-numerator, $span-denominators in $columns {
 		@each $span-denominator in $span-denominators {
 			.off-pr-#{$span-denominator}of#{$span-numerator}, .offset-pr-#{$span-denominator}of#{$span-numerator} {margin-left: percentage($span-denominator / $span-numerator);}
