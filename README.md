@@ -74,4 +74,4 @@ All parts of Flexible Framework are free to use and abuse under the [open-source
 
 ## Acknowledgement
 
-Flexible Framework was created by [Phillip Gore](https://www.phillipgoredesign.com/).
+Flexible Framework was created by [Phillip Gore Design](https://www.phillipgoredesign.com/).
