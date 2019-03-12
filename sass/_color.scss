@@ -8,13 +8,3 @@
 @each $color-name, $color in $colors {
 	.cl-#{$color-name}, .color-#{$color-name} { color: #{$color}; };
 }
-
-
-
-
-/* Print - Text Colors (pr) */
-@media print {
-	@each $color-name, $color in $colors {
-		.cl-pr-#{$color-name}, .color-pr-#{$color-name} { color: #{$color}; };
-	}
-}

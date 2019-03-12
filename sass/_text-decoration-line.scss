@@ -9,11 +9,3 @@ $txt-decoration-lines: ('none', 'underline', 'overline', 'line-through', 'initia
 @each $txt-decoration-line in $txt-decoration-lines {
     .txt-decoration-line-#{$txt-decoration-line}, .text-decoration-line-#{$txt-decoration-line} { text-decoration-line: #{$txt-decoration-line}; }
 }
-
-
-
-
-/* Print - Text Decoration Lines (pr) */
-@each $txt-decoration-line in $txt-decoration-lines {
-    .txt-decoration-line-pr-#{$txt-decoration-line}, .text-decoration-line-pr-#{$txt-decoration-line} { text-decoration-line: #{$txt-decoration-line}; }
-}

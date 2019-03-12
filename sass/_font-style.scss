@@ -7,11 +7,3 @@ $fnt-styles: ('normal', 'italic', 'oblique', 'initial', 'inherit' );
 @each $fnt-style in $fnt-styles {
     .fnt-style-#{$fnt-style}, .font-style-#{$fnt-style} { font-style: #{$fnt-style}; }
 }
-
-
-
-
-/* Print - Font Style (pr) */
-@each $fnt-style in $fnt-styles {
-    .fnt-style-pr-#{$fnt-style}, .font-style-pr-#{$fnt-style} { font-style: #{$fnt-style}; }
-}
