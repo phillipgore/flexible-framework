@@ -16,14 +16,14 @@ $img-heights: (36, 72, 90, 144, 288);
 
 		/* Image Heights (#{$query-label}) */
 		@each $img-height in $img-heights {
-			.img-height-#{$query-label}-#{$img-height}, .image-height-#{$query-label}-#{$img-height} { 
+			.img-#{$query-label}-height-#{$img-height}, .image-#{$query-label}-height-#{$img-height} { 
 				height: #{$img-height}px; 
 				width: auto;
 			}
 		}
 
 		/* Image Auto (#{$query-label}) */
-		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
+		.img-#{$query-label}-height-auto, .image-#{$query-label}-height-auto { 
 			height: auto; 
 			width: auto;
 		}
@@ -45,14 +45,14 @@ $img-heights: (36, 72, 90, 144, 288);
 	@each $query-label, $query-size in $queries {
 		/* Print Set - Image Heights (#{$query-label}) */
 		@each $img-height in $img-heights {
-			.img-height-#{$query-label}-#{$img-height}, .image-height-#{$query-label}-#{$img-height} { 
+			.img-#{$query-label}-height-#{$img-height}, .image-#{$query-label}-height-#{$img-height} { 
 				height: #{$img-height}px; 
 				width: auto;
 			}
 		}
 
 		/* Print Set - Image Auto (#{$query-label}) */
-		.img-height-#{$query-label}-auto, .image-height-#{$query-label}-auto { 
+		.img-#{$query-label}-height-auto, .image-#{$query-label}-height-auto { 
 			height: auto; 
 			width: auto;
 		}
@@ -67,14 +67,14 @@ $img-heights: (36, 72, 90, 144, 288);
 
 	/* Print - Image Heights (pr) */
 	@each $img-height in $img-heights {
-		.img-height-pr-#{$img-height}, .image-height-pr-#{$img-height} { 
+		.img-pr-height-#{$img-height}, .image-pr-height-#{$img-height} { 
 			height: #{$img-height}px; 
 			width: auto;
 		}
 	}
 
 	/* Print - Image Auto (pr) */
-	.img-height-pr-auto, .image-height-pr-auto { 
+	.img-pr-height-auto, .image-pr-height-auto { 
 		height: auto; 
 		width: auto;
 	}
