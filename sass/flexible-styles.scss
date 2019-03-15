@@ -1,68 +1,23 @@
 @import 'color-variables';
 @import 'breakpoint-variables';
 
-@import 'background-color';
-@import 'color';
-@import 'display';
-@import 'float';
-@import 'font-size';
+@import 'normalize'; // Reset code from github.com/necolas/normalize.css. (You may wish to check for an updated version)
+
+@import 'background-color'; // Requires _color-variables.scss.
+@import 'color'; // Requires _color-variables.scss.
+@import 'display'; // Requires _breakpoint-variables.scss.
+@import 'float'; // Requires _breakpoint-variables.scss.
+@import 'font-size'; // Requires _breakpoint-variables.scss.
 @import 'font-style';
 @import 'font-weight';
-@import 'grid';
-@import 'image-sizing';
-@import 'line-height';
-@import 'margin';
-@import 'padding';
-@import 'text-align';
+@import 'grid'; // Requires _breakpoint-variables.scss.
+@import 'image-sizing'; // Requires _breakpoint-variables.scss.
+@import 'line-height'; 
+@import 'margin'; // Requires _breakpoint-variables.scss.
+@import 'padding'; // Requires _breakpoint-variables.scss.
+@import 'text-align'; // Requires _breakpoint-variables.scss.
 @import 'text-decoration-line';
 @import 'text-transform';
+@import 'typography';
 
-
-/* Media Query for tn. */
-@media only screen and (min-width: #{map-get($queries, 'tn')}px) {
-    /* Place your tn code here. */
-	
-		
-}
-
-/* Media Query for xs. */
-@media only screen and (min-width: #{map-get($queries, 'xs')}px) {
-    /* Place your xs code here. */
-
-		
-}
-
-/* Media Query for sm. */
-@media only screen and (min-width: #{map-get($queries, 'sm')}px) {
-    /* Place your sm code here. */
-
-		
-}
-
-/* Media Query for md. */
-@media only screen and (min-width: #{map-get($queries, 'md')}px) {
-    /* Place your md code here. */
-
-		
-}
-
-/* Media Query for lg. */
-@media only screen and (min-width: #{map-get($queries, 'lg')}px) {
-    /* Place your lg code here. */
-
-		
-}
-
-/* Media Query for xl. */
-@media only screen and (min-width: #{map-get($queries, 'xl')}px) {
-    /* Place your xl code here. */
-
-		
-}
-
-/* Media Query for print. */
-@media print {
-    /* Place your print code here. */
-
-		
-}
+@import 'custom'; // Your code goes in this file. Requires _breakpoint-variables.scss.

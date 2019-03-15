@@ -13,6 +13,7 @@ flexible_framework/sass
 ├── _breakpoint-variables.scss
 ├── _color-variables.scss
 ├── _color.scss
+├── _custom.scss
 ├── _display.scss
 ├── _float.scss
 ├── _font-size.scss
@@ -22,10 +23,12 @@ flexible_framework/sass
 ├── _image-szing.scss
 ├── _line-height.scss
 ├── _margin.scss
+├── _normalize.scss // Reset code from github.com/necolas/normalize.css. (You may wish to check for an updated version)
 ├── _padding.scss
 ├── _text-align.scss
 ├── _text-decoration-lines.scss
 ├── _text-transform.scss
+├── _typography.scss
 ├── flexible-styles.scss
 
 ```
@@ -36,6 +39,7 @@ Flexible Framework is modular. Some files can be used on their own. Some of them
 
 SCSS files that require the code in `_breakpoint-variables.scss`.
 
+- `_custom.scss`
 - `_display.scss`
 - `_float.scss`
 - `_font-size.scss`

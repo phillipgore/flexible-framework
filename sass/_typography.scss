@@ -1,0 +1,46 @@
+/* --------------- Typography --------------- */
+
+html { 
+	font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica Lgiht", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0.5em 0; }
+
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.3rem; }
+h6 { font-size: 1.0rem; }
+
+p { font-size: 1.6rem; }
+address { font-size: 1.6rem; }
+blockquote { font-size: 1.6rem; }
+pre { font-size: 1.6rem; }
+
+// abbr {  }
+// acronym {  }
+// cite {  }
+// code {  }
+// del {  }
+// dfn {  }
+// em {  }
+// i {  }
+// ins {  }
+// q {  }
+// small {  }
+// strike {  }
+// strong {  }
+// sub {  }
+// sup {  }
+
+/* --------------- /Typography --------------- */
+
+
+
+/* ==================== Be carful making changes to the code below. It's not recomended. ==================== */
+
+/* Base Font Size (10px equivalent) */
+
+html { font-size: 62.5%; }
